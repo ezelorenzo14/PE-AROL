@@ -1,0 +1,212 @@
+@import"generales";
+$amarillo:#f4c542;
+$gris:#232222;
+$fuente:"figtree", sans-serif;
+
+body {
+    background-image: linear-gradient(to bottom, black,$gris,rgb(106, 85, 0),gold);
+    color:white ;
+    margin: 0;
+    padding: 0;
+    font-family: "figtree", sans-serif;
+}
+
+header {
+    background-color: $gris;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    img {
+        height: 50px;
+    }
+}
+
+nav {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin: 0 15px;
+
+            a {
+                color: $amarillo;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        ul {
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                margin: 10px 0;
+            }
+        }
+    }
+}
+
+.hero-section {
+    background-color: black;
+    padding: 50px;
+    color: $amarillo;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        animation-duration: 3s;
+    }
+    p{
+        animation-duration: 3s;
+    }
+
+    @media (max-width: 768px) {
+        padding: 20px;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+}
+
+.background-tienda {
+    background-image: url(../assets/indumemtaria\ 2024.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main {
+    background-image: linear-gradient(to bottom, black, $gris);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.beneficios {
+    display: block;
+    max-width: 100%;
+    margin-top: 3rem;
+}
+
+h1, h2, h3, h4 {
+    color: $amarillo;
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+.card img {
+    width: 100%;
+    border-top: 1px solid $amarillo;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel-item {
+    img {
+        width: 100%;
+        height: 500px;
+
+        @media (max-width: 768px) {
+            height: auto;
+        }
+    }
+}
+
+.footer-dark {
+    background-color: $gris;
+    color: $amarillo;
+}
+
+.newsletter {
+    margin-bottom: 20px;
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input[type="email"] {
+            padding: 10px;
+            border: 1px solid $amarillo;
+            border-radius: 5px 0 0 5px;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: 1px solid $amarillo;
+            border-radius: 0 5px 5px 0;
+            background-color: $amarillo;
+            color: black;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $amarillo;
+            }
+        }
+    }
+}
+
+.list-inline {
+    display: inline-flex;
+
+    img {
+        height: 3rem;
+        width: auto;
+    }
+}
