@@ -1,0 +1,44 @@
+//estilo del footer
+.footer-dark {
+    background-color: $gris;
+    color: $amarillo;
+}
+.newsletter {
+    margin-bottom: 20px;
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input[type="email"] {
+            padding: 10px;
+            border: 1px solid $amarillo;
+            border-radius: 5px 0 0 5px;
+            flex: 1;
+            max-width: 300px;
+        }
+//Botón de suscripción
+        button {
+            padding: 10px 20px;
+            border: 1px solid $amarillo;
+            border-radius: 0 5px 5px 0;
+            background-color: $amarillo;
+            color: black;
+            cursor: pointer;
+
+            &:hover {
+                background-color: gold;
+            }
+        }
+    }
+}
+//lista de pie de pagina
+.list-inline {
+    display: inline-flex;
+
+    img {
+        height: 3rem;
+        width: auto;
+    }
+}

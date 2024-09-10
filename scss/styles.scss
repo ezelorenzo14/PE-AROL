@@ -1,65 +1,8 @@
-//variables//
-$amarillo:#f4c542;
-$gris:#232222;
-$fuente:"figtree", sans-serif;
-
-
-body {
-    background-image: linear-gradient(to bottom, black, black, $gris);
-    color:white ;
-    margin: 0;
-    padding: 0;
-    font-family: "figtree", sans-serif;
-}
-
-header {
-    background-color: $gris;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    img {
-        height: 50px;
-    }
-}
-
-nav {
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-
-        li {
-            margin: 0 15px;
-
-            a {
-                color: $amarillo;
-                text-decoration: none;
-                font-weight: bold;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-
-    @media (max-width: 768px) {
-        ul {
-            flex-direction: column;
-            align-items: center;
-
-            li {
-                margin: 10px 0;
-            }
-        }
-    }
-}
+@import "variables.scss";
+@import "./layout/general";
+@import "./layout/footer";
+@import "./layout/beneficios";
+@import "./layout/tienda";
 
 //estilo de la la seccion de hero
 .hero-section {
@@ -87,37 +30,6 @@ nav {
     }
 }
 
-//estilos de pagina de tienda
-.background-tienda {
-    background-image: url(../assets/indumemtaria\ 2024.webp);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 5px;
-
-    @media (max-width: 768px) {
-        padding: 20px;
-
-        h1 {
-            font-size: 2rem;
-        }
-    }
-}
-
-main {
-    background-image: linear-gradient(to bottom, black, $gris);
-    padding: 20px;
-    border-radius: 5px;
-    margin: 20px auto;
-    max-width: 900px;
-}
-//pagina de bene
-.beneficios {
-    display: block;
-    max-width: 100%;
-    margin-top: 3rem;
-}
 
 h1, h2, h3, h4 {
     color: $amarillo;
@@ -176,50 +88,5 @@ ul {
         @media (max-width: 768px) {
             height: auto;
         }
-    }
-}
-//estilo del footer
-.footer-dark {
-    background-color: $gris;
-    color: $amarillo;
-}
-
-.newsletter {
-    margin-bottom: 20px;
-
-    form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        input[type="email"] {
-            padding: 10px;
-            border: 1px solid $amarillo;
-            border-radius: 5px 0 0 5px;
-            flex: 1;
-            max-width: 300px;
-        }
-//Botón de suscripción
-        button {
-            padding: 10px 20px;
-            border: 1px solid $amarillo;
-            border-radius: 0 5px 5px 0;
-            background-color: $amarillo;
-            color: black;
-            cursor: pointer;
-
-            &:hover {
-                background-color: gold;
-            }
-        }
-    }
-}
-//lista de pie de pagina
-.list-inline {
-    display: inline-flex;
-
-    img {
-        height: 3rem;
-        width: auto;
     }
 }

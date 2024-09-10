@@ -47,6 +47,77 @@ nav ul li a:hover {
   }
 }
 
+main {
+  background-image: linear-gradient(to bottom, black, #232222);
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.footer-dark {
+  background-color: #232222;
+  color: #f4c542;
+}
+
+.newsletter {
+  margin-bottom: 20px;
+}
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter form input[type=email] {
+  padding: 10px;
+  border: 1px solid #f4c542;
+  border-radius: 5px 0 0 5px;
+  flex: 1;
+  max-width: 300px;
+}
+.newsletter form button {
+  padding: 10px 20px;
+  border: 1px solid #f4c542;
+  border-radius: 0 5px 5px 0;
+  background-color: #f4c542;
+  color: black;
+  cursor: pointer;
+}
+.newsletter form button:hover {
+  background-color: gold;
+}
+
+.list-inline {
+  display: inline-flex;
+}
+.list-inline img {
+  height: 3rem;
+  width: auto;
+}
+
+.beneficios {
+  display: block;
+  max-width: 100%;
+  margin-top: 3rem;
+}
+
+.background-tienda {
+  background-image: url(../assets/indumemtaria\ 2024.webp);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .background-tienda {
+    padding: 20px;
+  }
+  .background-tienda h1 {
+    font-size: 2rem;
+  }
+}
+
 .hero-section {
   background-color: black;
   padding: 100px;
@@ -69,37 +140,6 @@ nav ul li a:hover {
   .hero-section h1 {
     font-size: 2rem;
   }
-}
-
-.background-tienda {
-  background-image: url(../assets/indumemtaria\ 2024.webp);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 5px;
-}
-@media (max-width: 768px) {
-  .background-tienda {
-    padding: 20px;
-  }
-  .background-tienda h1 {
-    font-size: 2rem;
-  }
-}
-
-main {
-  background-image: linear-gradient(to bottom, black, #232222);
-  padding: 20px;
-  border-radius: 5px;
-  margin: 20px auto;
-  max-width: 900px;
-}
-
-.beneficios {
-  display: block;
-  max-width: 100%;
-  margin-top: 3rem;
 }
 
 h1, h2, h3, h4 {
@@ -157,46 +197,6 @@ ul {
   .carousel-item img {
     height: auto;
   }
-}
-
-.footer-dark {
-  background-color: #232222;
-  color: #f4c542;
-}
-
-.newsletter {
-  margin-bottom: 20px;
-}
-.newsletter form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.newsletter form input[type=email] {
-  padding: 10px;
-  border: 1px solid #f4c542;
-  border-radius: 5px 0 0 5px;
-  flex: 1;
-  max-width: 300px;
-}
-.newsletter form button {
-  padding: 10px 20px;
-  border: 1px solid #f4c542;
-  border-radius: 0 5px 5px 0;
-  background-color: #f4c542;
-  color: black;
-  cursor: pointer;
-}
-.newsletter form button:hover {
-  background-color: gold;
-}
-
-.list-inline {
-  display: inline-flex;
-}
-.list-inline img {
-  height: 3rem;
-  width: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

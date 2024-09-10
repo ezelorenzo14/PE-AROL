@@ -1,0 +1,17 @@
+//estilos de pagina de tienda
+.background-tienda {
+    background-image: url(../assets/indumemtaria\ 2024.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+
+    @media (max-width: 768px) {
+        padding: 20px;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+}
