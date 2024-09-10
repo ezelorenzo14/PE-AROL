@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(to bottom, black, #232222, rgb(106, 85, 0), gold);
+  background-image: linear-gradient(to bottom, black, black, #232222);
   color: white;
   margin: 0;
   padding: 0;
@@ -49,7 +49,7 @@ nav ul li a:hover {
 
 .hero-section {
   background-color: black;
-  padding: 50px;
+  padding: 100px;
   color: #f4c542;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   text-align: center;
@@ -77,6 +77,15 @@ nav ul li a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .background-tienda {
+    padding: 20px;
+  }
+  .background-tienda h1 {
+    font-size: 2rem;
+  }
 }
 
 main {
@@ -179,7 +188,7 @@ ul {
   cursor: pointer;
 }
 .newsletter form button:hover {
-  background-color: #f4c542;
+  background-color: gold;
 }
 
 .list-inline {

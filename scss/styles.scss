@@ -1,10 +1,11 @@
-@import"generales";
+//variables//
 $amarillo:#f4c542;
 $gris:#232222;
 $fuente:"figtree", sans-serif;
 
+
 body {
-    background-image: linear-gradient(to bottom, black,$gris,rgb(106, 85, 0),gold);
+    background-image: linear-gradient(to bottom, black, black, $gris);
     color:white ;
     margin: 0;
     padding: 0;
@@ -60,9 +61,10 @@ nav {
     }
 }
 
+//estilo de la la seccion de hero
 .hero-section {
     background-color: black;
-    padding: 50px;
+    padding: 100px;
     color: $amarillo;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     text-align: center;
@@ -85,12 +87,22 @@ nav {
     }
 }
 
+//estilos de pagina de tienda
 .background-tienda {
     background-image: url(../assets/indumemtaria\ 2024.webp);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 5px;
+
+    @media (max-width: 768px) {
+        padding: 20px;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
 }
 
 main {
@@ -100,7 +112,7 @@ main {
     margin: 20px auto;
     max-width: 900px;
 }
-
+//pagina de bene
 .beneficios {
     display: block;
     max-width: 100%;
@@ -147,6 +159,7 @@ ul {
     margin-left: 20px;
 }
 
+//imagenes dentro de las tarjetas de bootstrap
 .card img {
     width: 100%;
     border-top: 1px solid $amarillo;
@@ -154,7 +167,7 @@ ul {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+//carrusel de img
 .carousel-item {
     img {
         width: 100%;
@@ -165,7 +178,7 @@ ul {
         }
     }
 }
-
+//estilo del footer
 .footer-dark {
     background-color: $gris;
     color: $amarillo;
@@ -186,7 +199,7 @@ ul {
             flex: 1;
             max-width: 300px;
         }
-
+//Botón de suscripción
         button {
             padding: 10px 20px;
             border: 1px solid $amarillo;
@@ -196,12 +209,12 @@ ul {
             cursor: pointer;
 
             &:hover {
-                background-color: $amarillo;
+                background-color: gold;
             }
         }
     }
 }
-
+//lista de pie de pagina
 .list-inline {
     display: inline-flex;
 
