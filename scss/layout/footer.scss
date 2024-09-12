@@ -1,4 +1,5 @@
 //estilo del footer
+@import "../mixins";
 .footer-dark {
     background-color: $gris;
     color: $amarillo;
@@ -7,9 +8,7 @@
     margin-bottom: 20px;
 
     form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+       @include center-flex;
 
         input[type="email"] {
             padding: 10px;

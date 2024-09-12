@@ -1,0 +1,12 @@
+@import "../mixins";
+//carrusel de img
+.carousel-item {
+    img {
+        width: 100%;
+        height: 500px;
+
+        @include breakpoint-small {
+            height: auto;
+        }
+    }
+}

@@ -1,3 +1,5 @@
+@import "../mixins";
+
 //estilos de pagina de tienda
 .background-tienda {
     background-image: url(../assets/indumemtaria\ 2024.webp);
@@ -7,7 +9,7 @@
     background-position: center;
     border-radius: 5px;
 
-    @media (max-width: 768px) {
+    @include breakpoint-small {
         padding: 20px;
 
         h1 {
