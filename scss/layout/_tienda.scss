@@ -1,5 +1,5 @@
 @import "../mixins";
-
+@import "../variables";
 //estilos de pagina de tienda
 .background-tienda {
     background-image: url(../assets/indumemtaria\ 2024.webp);
@@ -17,3 +17,12 @@
         }
     }
 }
+
+.btn-warning {
+    background-color: $amarillo;
+    border-color: $amarillo;
+    color: black;
+  }
+  .btn-warning:hover {
+    background-color: gold;
+  }

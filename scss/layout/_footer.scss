@@ -1,5 +1,6 @@
 //estilo del footer
 @import "../mixins";
+@import "../variables";
 .footer-dark {
     background-color: $gris;
     color: $amarillo;
@@ -41,3 +42,9 @@
         width: auto;
     }
 }
+
+input[type="email"] {
+    border: 1px solid $amarillo;
+    background-color: black;
+    color: white;
+  }

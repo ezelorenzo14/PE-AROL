@@ -1,6 +1,12 @@
+@import "../mixins";
 //pagina de bene
 .beneficios {
-    display: block;
+    @include center-flex;
     max-width: 100%;
     margin-top: 3rem;
+}
+.img-socios{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }

@@ -1,5 +1,16 @@
 @import "../mixins";
+@import "../variables";
 
+.btn, input, select, textarea {
+    font-family: "figtree", sans-serif;
+  }
+.container{
+    padding: 10px;
+}
+.col-lg-4{
+    background-color:$gris;
+    padding: 10px;
+}
 body {
     background-image: linear-gradient(to bottom, black, black, $gris);
     color:white ;

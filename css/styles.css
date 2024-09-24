@@ -1,3 +1,16 @@
+.btn, input, select, textarea {
+  font-family: "figtree", sans-serif;
+}
+
+.container {
+  padding: 10px;
+}
+
+.col-lg-4 {
+  background-color: #232222;
+  padding: 10px;
+}
+
 body {
   background-image: linear-gradient(to bottom, black, black, #232222);
   color: white;
@@ -166,10 +179,24 @@ ul {
   width: auto;
 }
 
+input[type=email] {
+  border: 1px solid #f4c542;
+  background-color: black;
+  color: white;
+}
+
 .beneficios {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
   margin-top: 3rem;
+}
+
+.img-socios {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .background-tienda {
@@ -187,6 +214,16 @@ ul {
   .background-tienda h1 {
     font-size: 2rem;
   }
+}
+
+.btn-warning {
+  background-color: #f4c542;
+  border-color: #f4c542;
+  color: black;
+}
+
+.btn-warning:hover {
+  background-color: gold;
 }
 
 .carousel-item img {
