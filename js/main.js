@@ -1,53 +1,39 @@
-//let nombredeusuario = prompt("Ingresar nombre de usuario")
-//if (nombredeusuario == "") {
-//    console.log("no ingrsaste el nombre de usuario")
-//}
-//else {
-//    console.log("nombre de usuario ingrsado " + nombredeusuario)
-//}
-
-//let ingresarnumero = parseInt(prompt("ingrsar numero"));
-
-//for (let i = 1; i <= 10; i++) {
-   // let resultado = ingresarnumero * i;
-    //console.log(ingresarnumero + " X "+ i +" = "+ resultado);
-//}
-
-
-const preguntastotales = 3;
-
-const preguntas = [
-    "¿En qué año se fundó el Club Atlético Peñarol?",
-    "¿Cuál es el apodo de Peñarol?",
-    "¿Cuál es el máximo rival de Peñarol?",
-];
-
-const respuestasCorrectas = [
-    "1891",
-    "manyas",
-    "nacional",
-];
-
-let aciertos = 0;
-
-for (let i = 0; i < preguntastotales; i++) {
-
-    let respuestaUsuario = prompt(preguntas[i]);
-    if (respuestaUsuario) {
-        respuestaUsuario = respuestaUsuario.toLowerCase();
-    }
-    if (respuestaUsuario === respuestasCorrectas[i]) {
-        console.log("¡Correcto!");
-        aciertos++;
-    } else {
-        console.log("Incorrecto. La respuesta correcta es: " + respuestasCorrectas[i]);
-    }
-}
-
-let puntajeFinal = (aciertos / preguntastotales) * 10;
-
-console.log("Has terminado el cuestionario.");
-console.log("Aciertos: " + aciertos + " de " + preguntastotales);
-console.log("Tu puntaje final es: " + puntajeFinal.toFixed(1));
-
-//No se que hago mal que me saltea la segunda pregunta, intenté arreglarlo con chatgpt y supuestamente me lo arregló pero sigue salteandola, para peor no veo donde le estoy errando, pero bueno es la primera preentrega
+const productos = {
+    camiseta: 4500, 
+    canguro: 3000,
+    pantalon: 2500,
+    shorts: 1500,
+    polo: 3500,
+  };
+  function esProductoValido(producto) {
+    return productos.hasOwnProperty(producto);
+  }
+  let productoSeleccionado = prompt("Elige un producto: camiseta, canguro, pantalon, shorts o polo:").toLowerCase().trim();
+  while (!esProductoValido(productoSeleccionado)) {
+    productoSeleccionado = prompt("Producto no válido. Por favor elige: camiseta, canguro, pantalon, shorts o polo:").toLowerCase().trim();
+  }
+  let cantidad = parseInt(prompt("¿Cuántos deseas comprar?"), 10);
+  while (isNaN(cantidad) || cantidad <= 0) {
+    cantidad = parseInt(prompt("Cantidad no válida. Ingresa un número mayor a 0:"), 10);
+  }
+  let codigoDescuento = prompt("Ingresa un código de descuento si tienes uno:");
+  function calcularTotal(producto, cantidad) {
+    return productos[producto] * cantidad;
+  }
+  
+  function aplicarDescuento(total, codigo) {
+    const descuento = codigo === "PEÑAROL10" ? 0.10 : 0;
+    return total - (total * descuento);
+  }
+  
+  let totalCompra = calcularTotal(productoSeleccionado, cantidad);
+  let totalFinal = aplicarDescuento(totalCompra, codigoDescuento);
+  console.log("Resumen de tu compra:");
+  console.log(`Producto: ${productoSeleccionado}`);
+  console.log(`Cantidad: ${cantidad}`);
+  console.log(`Total sin descuento: $${totalCompra}`);
+  console.log(`Descuento aplicado: ${codigoDescuento === "PEÑAROL10" ? "10%" : "0%"}`);
+  console.log(`Total a pagar: $${totalFinal.toFixed(2)}`);
+  
+  alert(`Gracias por tu compra. El total a pagar es $${totalFinal.toFixed(2)}`);
+  
