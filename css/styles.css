@@ -236,4 +236,45 @@ input[type=email] {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+.store-container {
+  display: flex;
+  gap: 20px;
+}
+
+.product-list {
+  flex: 3;
+}
+
+.cart {
+  flex: 1;
+  background-color: #222;
+  color: #ffd700;
+  padding: 20px;
+  border: 1px solid #ffd700;
+  border-radius: 5px;
+  position: sticky; 
+  top: 10px;
+  height: fit-content;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-items li {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #ffd700;
+  color: #222;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e6c300;
+}
+

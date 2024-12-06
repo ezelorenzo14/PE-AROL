@@ -1,39 +1,62 @@
-const productos = {
-    camiseta: 4500, 
-    canguro: 3000,
-    pantalon: 2500,
-    shorts: 1500,
-    polo: 3500,
-  };
-  function esProductoValido(producto) {
-    return productos.hasOwnProperty(producto);
-  }
-  let productoSeleccionado = prompt("Elige un producto: camiseta, canguro, pantalon, shorts o polo:").toLowerCase().trim();
-  while (!esProductoValido(productoSeleccionado)) {
-    productoSeleccionado = prompt("Producto no válido. Por favor elige: camiseta, canguro, pantalon, shorts o polo:").toLowerCase().trim();
-  }
-  let cantidad = parseInt(prompt("¿Cuántos deseas comprar?"), 10);
-  while (isNaN(cantidad) || cantidad <= 0) {
-    cantidad = parseInt(prompt("Cantidad no válida. Ingresa un número mayor a 0:"), 10);
-  }
-  let codigoDescuento = prompt("Ingresa un código de descuento si tienes uno:");
-  function calcularTotal(producto, cantidad) {
-    return productos[producto] * cantidad;
-  }
-  
-  function aplicarDescuento(total, codigo) {
-    const descuento = codigo === "PEÑAROL10" ? 0.10 : 0;
-    return total - (total * descuento);
-  }
-  
-  let totalCompra = calcularTotal(productoSeleccionado, cantidad);
-  let totalFinal = aplicarDescuento(totalCompra, codigoDescuento);
-  console.log("Resumen de tu compra:");
-  console.log(`Producto: ${productoSeleccionado}`);
-  console.log(`Cantidad: ${cantidad}`);
-  console.log(`Total sin descuento: $${totalCompra}`);
-  console.log(`Descuento aplicado: ${codigoDescuento === "PEÑAROL10" ? "10%" : "0%"}`);
-  console.log(`Total a pagar: $${totalFinal.toFixed(2)}`);
-  
-  alert(`Gracias por tu compra. El total a pagar es $${totalFinal.toFixed(2)}`);
-  
+document.addEventListener("DOMContentLoaded", () => {
+  const cartItems = document.querySelector(".cart-items");
+  const totalPriceEl = document.getElementById("total-price");
+  let totalPrice = 0;
+
+  document.querySelectorAll(".add-to-cart").forEach((button) => {
+    button.addEventListener("click", () => {
+      const name = button.dataset.name;
+      const price = parseFloat(button.dataset.price);
+
+      const item = document.createElement("li");
+      item.textContent = `${name} - $${price}`;
+      cartItems.appendChild(item);
+
+      totalPrice += price;
+      totalPriceEl.textContent = totalPrice.toFixed(2);
+
+      if (cartItems.children[0].textContent === "Tu carrito está vacío.") {
+        cartItems.children[0].remove();
+      }
+    });
+  });
+});
+
+let inactivityTimer;
+let countdownTimer;
+
+
+const inactivityLimit = 10 * 60 * 1000; 
+let remainingTime = inactivityLimit / 1000;
+
+const timeRemainingElement = document.getElementById("time-remaining");
+
+function redirectToPreviousPage() {
+    alert("Por inactividad, serás redirigido a la página anterior.");
+    window.history.back();
+}
+function resetInactivityTimer() {
+    clearTimeout(inactivityTimer);
+    clearInterval(countdownTimer);
+    remainingTime = inactivityLimit / 1000; 
+    updateCountdown(); 
+    countdownTimer = setInterval(updateCountdown, 1000); 
+    inactivityTimer = setTimeout(redirectToPreviousPage, inactivityLimit);
+}
+
+function updateCountdown() {
+    remainingTime--;
+    if (remainingTime <= 0) {
+        clearInterval(countdownTimer);
+        return;
+    }
+    const minutes = Math.floor(remainingTime / 60);
+    const seconds = remainingTime % 60;
+    timeRemainingElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
+document.addEventListener("mousemove", resetInactivityTimer);
+document.addEventListener("click", resetInactivityTimer);
+document.addEventListener("keydown", resetInactivityTimer);
+
+resetInactivityTimer();
