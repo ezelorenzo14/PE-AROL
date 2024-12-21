@@ -1,0 +1,7 @@
+[
+  { "name": "Camiseta", "price": 50 },
+  { "name": "Canguro", "price": 70 },
+  { "name": "Pantalón", "price": 60 },
+  { "name": "Shorts", "price": 40 },
+  { "name": "Polo", "price": 30 }
+]

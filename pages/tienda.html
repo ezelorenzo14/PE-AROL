@@ -36,14 +36,14 @@
 
 
     <main class="container my-5">
-        <section class="hero-section text-center background-tienda">
+        <section class="product-list" class="hero-section text-center background-tienda">
             <div class="container">
                 <h1>Nuestra Tienda Oficial</h1>
                 <p class="lead">¡Adquiere tus productos oficiales de Peñarol aquí!</p>
             </div>
         </section>
 
-        <section class="row text-center">
+        <section class="row text-center" id="productos-container">
             <div class="col-lg-4 mb-4">
                 <div class="card bg-dark text-light border-warning h-100">
                     <div class="card-body">
@@ -70,7 +70,7 @@
                         <h2 class="card-title">Camiseta Oficial GK</h2>
                         <p class="card-text">Precio: $3500</p>
                         <img src="../assets/camiseta gk.webp" alt="Camiseta de golero">
-                        <button class="add-to-cart" data-name="Camiseta" data-price="3500">Comprar Ahora</button>
+                        <button class="add-to-cart" data-name="Camiseta" data-price="4500">Comprar Ahora</button>
                     </div>
                 </div>
             </div>
@@ -170,7 +170,7 @@
         </div>        
         <aside class="cart">
             <h2>Carrito</h2>
-            <ul class="cart-items">
+            <ul id="cart-items" class="cart-items">
               <li>Tu carrito está vacío.</li>
             </ul>
             <p>Total: $<span id="total-price">0</span></p>
@@ -203,5 +203,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </body>
 </html>
