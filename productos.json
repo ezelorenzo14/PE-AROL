@@ -1,7 +1,74 @@
 [
-  { "name": "Camiseta", "price": 50 },
-  { "name": "Canguro", "price": 70 },
-  { "name": "Pantalón", "price": 60 },
-  { "name": "Shorts", "price": 40 },
-  { "name": "Polo", "price": 30 }
+  {
+    "name": "Camiseta Oficial",
+    "price": 4500,
+    "image": "./assets/camiseta negra.webp",
+    "description": "Camiseta oficial negra"
+  },
+  {
+    "name": "Camiseta Oficial Alt",
+    "price": 4500,
+    "image": "./assets/penarol-home-jersey-24-77929101-amarillo-negro.webp",
+    "description": "Camiseta amarillo 2024"
+  },
+  {
+    "name": "Camiseta Oficial GK",
+    "price": 3500,
+    "image": "./assets/camiseta gk.webp",
+    "description": "Camiseta de golero"
+  },
+  {
+    "name": "Canguro Ofi",
+    "price": 3000,
+    "image": "./assets/canguro 24 negro.webp",
+    "description": "Canguro oficial"
+  },
+  {
+    "name": "Canguro Gris",
+    "price": 3000,
+    "image": "./assets/canguro gris.webp",
+    "description": "Canguro gris"
+  },
+  {
+    "name": "Canguro Train",
+    "price": 3000,
+    "image": "./assets/canguro train.webp",
+    "description": "Canguro de entrenamiento"
+  },
+  {
+    "name": "Pantalón Train",
+    "price": 2500,
+    "image": "./assets/pantalon train.webp",
+    "description": "Pantalón train"
+  },
+  {
+    "name": "Short Gris",
+    "price": 1500,
+    "image": "./assets/short gris.webp",
+    "description": "Short gris"
+  },
+  {
+    "name": "Short Negro",
+    "price": 1500,
+    "image": "./assets/short negro.webp",
+    "description": "Short negro"
+  },
+  {
+    "name": "Polo Ofi",
+    "price": 3500,
+    "image": "./assets/polo 24.webp",
+    "description": "Polo oficial"
+  },
+  {
+    "name": "Polo Gris",
+    "price": 3500,
+    "image": "./assets/polo gris 24.webp",
+    "description": "Polo gris"
+  },
+  {
+    "name": "Polo Negro",
+    "price": 3500,
+    "image": "./assets/polo negro 24.webp",
+    "description": "Polo negro"
+  }
 ]
